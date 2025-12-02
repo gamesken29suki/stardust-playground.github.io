@@ -1,0 +1,113 @@
+/* ====================================
+   1. 寒色系カラーパレット定義
+==================================== */
+:root {
+    /* メインカラー */
+    --color-bg-dark: #0A192F;      /* 深い夜空 */
+    --color-bg-mid: #172A45;       /* カード、ナビゲーション背景 */
+    --color-text-light: #CCD6F6;   /* メインの文字色 */
+    
+    /* アクセントカラー (サイアン/エメラルドグリーン) */
+    --color-accent-main: #64FFDA;  /* メインのネオン色 */
+    --color-accent-shadow: #64FFDA;/* シャドウ用 */
+    
+    /* サブアクセントカラー (ラベンダーパープル) */
+    --color-sub-accent: #B388FF;
+    
+    /* Bootstrap変数上書き */
+    --bs-body-bg: var(--color-bg-dark);
+    --bs-body-color: var(--color-text-light);
+    --bs-dark: var(--color-bg-mid);
+    --bs-info: var(--color-accent-main);
+    --bs-light: var(--color-text-light);
+}
+
+/* ====================================
+   2. 基本スタイルとタイポグラフィ
+==================================== */
+body {
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    /* スムーズスクロールを有効化 (script.js でも実装推奨) */
+    scroll-behavior: smooth; 
+}
+
+/* 全体のフォントとリンクの色 */
+a {
+    color: var(--color-accent-main);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--color-sub-accent);
+}
+
+/* ====================================
+   3. ナビゲーション (Header) のカスタム
+==================================== */
+.custom-navbar {
+    background-color: rgba(10, 25, 47, 0.95); /* 半透明で固定 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.navbar-brand {
+    color: var(--color-accent-main) !important;
+}
+.navbar-nav .nav-link {
+    color: var(--color-text-light) !important;
+    transition: color 0.3s;
+}
+.navbar-nav .nav-link:hover {
+    color: var(--color-accent-main) !important;
+}
+
+/* ====================================
+   4. ヒーローセクション (Hero) のカスタム
+==================================== */
+.hero {
+    /* サイトに合った画像URLに変更してください */
+    background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), url('stars_bg.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 90vh; /* 画面いっぱいに表示 */
+    padding-top: 100px;
+}
+
+/* ネオンエフェクト (タイトルとシャドウ) */
+.text-shadow-neon {
+    text-shadow: 
+        0 0 7px rgba(179, 136, 255, 0.5), /* ラベンダーパープル */
+        0 0 10px rgba(100, 255, 218, 0.7); /* サイアン */
+}
+
+/* 参加ボタンのネオンカスタム */
+.btn-join {
+    background-color: var(--color-accent-main) !important;
+    color: var(--color-bg-dark) !important; 
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 0 15px var(--color-accent-shadow); /* 強めのネオンシャドウ */
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+.btn-join:hover {
+    box-shadow: 0 0 25px var(--color-accent-shadow);
+    transform: translateY(-2px);
+}
+
+/* ====================================
+   5. コンテンツセクションのカスタム
+==================================== */
+
+/* カードのカスタム (活動の柱) */
+.custom-card-dark {
+    background-color: var(--color-bg-mid) !important; 
+    border: 1px solid var(--color-sub-accent); /* ラベンダーの細い枠線 */
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 10px;
+}
+.custom-card-dark:hover {
+    transform: translateY(-5px); /* ホバーで少し浮かせる */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+.text-shadow-sub {
+    color: var(--color-text-light);
+    text-shadow: 1px 1px 3px var(--color-accent-main);
+}
