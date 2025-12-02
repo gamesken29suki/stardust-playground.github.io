@@ -110,4 +110,26 @@ a:hover {
 .text-shadow-sub {
     color: var(--color-text-light);
     text-shadow: 1px 1px 3px var(--color-accent-main);
+
+}
+/* ====================================
+6. JavaScript アニメーション連携
+   (script.js の Intersection Observer 用)
+==================================== */
+
+/* アニメーション対象の初期状態を定義 */
+.custom-card-dark {
+    /* 既存の定義を残しつつ、ここに初期状態の transform と opacity を追記 */
+    opacity: 0;
+    transform: translateY(20px);
+    
+    /* ホバー時の transition が上書きされないよう注意 */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Intersection Observer で画面内に入った時に付与されるクラス */
+.animate-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: opacity 1s ease-out, transform 0.8s ease-out;
 }
