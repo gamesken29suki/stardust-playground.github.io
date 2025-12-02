@@ -41,16 +41,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// ********** 注意: style.cssに以下のクラスを追加してください **********
-/*
-.animate-in {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-    transition: opacity 1s ease-out, transform 0.8s ease-out;
-}
-
-.custom-card-dark {
-    opacity: 0;
-    transform: translateY(20px);
-}
-*/
