@@ -133,4 +133,44 @@ a:hover {
     transform: translateY(0) !important;
     transition: opacity 1s ease-out, transform 0.8s ease-out;
 }
+/* ====================================
+   7. フッター (Footer) のカスタム装飾
+==================================== */
+.custom-footer {
+    background-color: var(--color-bg-mid) !important; /* 少し濃い背景色 */
+    border-top: 2px solid var(--color-sub-accent); /* ラベンダーパープルの細い境界線 */
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 主要リンクのスタイル */
+.footer-links a {
+    color: var(--color-text-light) !important;
+    font-weight: 500;
+    transition: color 0.3s;
+    /* リンクに薄いネオンシャドウ */
+    text-shadow: 0 0 5px rgba(179, 136, 255, 0.4); 
+}
+.footer-links a:hover {
+    color: var(--color-accent-main) !important; /* ホバーでサイアンに */
+    text-shadow: 0 0 10px var(--color-accent-main);
+}
+
+/* SNSアイコンのスタイル */
+.social-icon {
+    color: var(--color-text-light) !important;
+    font-size: 1.25rem; /* サイズを少し大きく */
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icon:hover {
+    color: var(--color-accent-main) !important;
+    transform: translateY(-3px); /* わずかに浮かせる */
+    text-shadow: 0 0 8px var(--color-accent-main);
+}
+
+/* 著作権表示 */
+.copyright-text {
+    color: rgba(204, 214, 246, 0.7); /* 控えめな文字色 */
+    font-size: 0.85rem;
+}
 
